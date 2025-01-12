@@ -1,19 +1,10 @@
 @echo off
 
-:: Récupérer la date et l'heure locale
-for /f "tokens=2 delims==" %%A in ('"wmic os get localdatetime /value"') do set datetime=%%A
-
-:: Extraire les parties de la date et de l'heure
-set year=%datetime:~0,4%
-set month=%datetime:~4,2%
-
-set day=%datetime:~6,2%
-set hour=%datetime:~8,2%
-set minute=%datetime:~10,2%
-set second=%datetime:~12,2%
+:: Récupérer la date et l'heure locale via PowerShell
+for /f "tokens=*" %%A in ('powershell -command "Get-Date -Format yyyyMMddHHmmss"') do set datetime=%%A
 
 :: Construire le message de commit
-set commit_message=%year%-%month%-%day% %hour%:%minute%:%second%
+set commit_message=Commit on %datetime%
 
 :: Ajouter les changements, commiter et pousser
 git add .
@@ -24,4 +15,4 @@ git push
 :: git config --global credential.helper store
 
 :: Pause pour vérifier les messages d'erreur éventuels
-:: pause
+
