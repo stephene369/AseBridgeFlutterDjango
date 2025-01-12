@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 // const primaryColor = Colors.white;
 // const secondaryColor = Colors.grey;
 
-
 const mobileBackgroundColor = Color.fromRGBO(255, 255, 255, 1); // 
 const webBackgroundColor = Color.fromRGBO(245, 245, 245, 1); // 
 const mobileSearchColor = Color.fromRGBO(230, 230, 230, 1); // 
