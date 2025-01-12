@@ -1,6 +1,5 @@
 import "package:flutter/material.dart"; 
 
-
 class WebScreenLayout extends StatelessWidget {
   const WebScreenLayout({super.key});
 
@@ -9,7 +8,7 @@ class WebScreenLayout extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text("This is web"),
-        
+
       ),
     );
   }

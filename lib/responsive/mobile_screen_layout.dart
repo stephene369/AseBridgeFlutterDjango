@@ -1,6 +1,5 @@
 import "package:flutter/material.dart"; 
 
-
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({super.key});
 
